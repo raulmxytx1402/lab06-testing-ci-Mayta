@@ -9,7 +9,7 @@ def test_calcular_total_factura_exitoso_con_mock():
     # Simulamos que la API externa devuelve un tipo de cambio fijo de 3.80
     with patch("facturacion.obtener_tipo_cambio", return_value=3.80):
         resultado = calcular_total_factura(100.0, aplicar_descuento=False)
-        assert resultado == 999.00
+        assert resultado == 380.00
 
 
 def test_calcular_total_factura_con_descuento_mock():
